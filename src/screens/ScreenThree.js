@@ -247,7 +247,15 @@ const ScreenThree = ({navigation, route}) => {
     return images.map((item, key) => {
       return (
         <View style={styles.imageList}>
-          <Text style={styles.imageText}>Picture {key+1}...</Text>
+          <TouchableOpacity 
+            key={key} 
+            style={styles.imageTextButton}
+            onPress={() => {
+              navigation.navigate("ViewImageScreen", {image : item, id: id} )
+            }}
+          >
+            <Text style={styles.imageText}>Picture {key+1}... </Text>
+          </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
               deleteImage(item)
@@ -425,10 +433,14 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginLeft: 25,
         marginRight: 25,
+        
       },
       imageText:{
         color:"rgb(116,148, 185)",
-        margin: 3
+      },
+      imageTextButton:{
+        margin: 3,
+        marginBottom: 8
       }
   });
 

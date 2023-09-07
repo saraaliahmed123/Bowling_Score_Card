@@ -11,6 +11,7 @@ import ScreenTwo from "./src/screens/ScreenTwo";
 import ScreenThree from "./src/screens/ScreenThree";
 import { ItemProvider } from "./src/contexts/ItemContext";
 import CameraScreen from "./src/screens/CameraScreen";
+import ViewImageScreen from "./src/screens/ViewImageScreen";
 
 const FormStack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ const AddScreenf = () => {
     <FormStack.Screen name="ScreenTwo" component={ScreenTwo} />
     <FormStack.Screen name="ScreenThree" component={ScreenThree} />
     <FormStack.Screen name="CameraScreen" component={CameraScreen} />
+    <FormStack.Screen name="ViewImageScreen" component={ViewImageScreen} />
   </FormStack.Navigator>
   )
 }

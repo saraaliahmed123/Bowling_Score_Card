@@ -62,13 +62,23 @@ const CameraScreen = ({navigation, route}) => {
         {viewPicture()}
 
         <View style={styles.buttons}>
-        {/* <Pressable style={styles.buttonStyle} onPress={() => {
-                getPicture();
-            }}
-            >
-                <Text>Take</Text>
-        </Pressable> */}
 
+        <Button onPress={() => {
+            updateScreen(
+                currentItem.id,
+                currentItem.competition, 
+                currentItem.date, 
+                currentItem.rinkNo,
+                currentItem.teamOneName,
+                currentItem.teamTwoName,
+                currentItem.teamOne,
+                currentItem.teamTwo,
+                currentItem.teamOneShots,
+                currentItem.teamTwoShots,
+                images
+              );
+        navigation.navigate("ScreenThree", {id} );
+            }} text="Back" />
         <Button onPress={() => {getPicture()}} text="Take" />
         <Button onPress={() => {
             updateScreen(
@@ -87,24 +97,6 @@ const CameraScreen = ({navigation, route}) => {
         navigation.navigate("ScreenThree", {id} );
             }} text="Done" />
 
-        {/* <Pressable style={styles.buttonStyle} onPress={() => {
-            updateScreen(
-                    currentItem.id,
-                    currentItem.competition, 
-                    currentItem.date, 
-                    currentItem.rinkNo,
-                    currentItem.teamOneName,
-                    currentItem.teamTwoName,
-                    currentItem.teamOne,
-                    currentItem.teamTwo,
-                    currentItem.teamOneShots,
-                    currentItem.teamTwoShots,
-                    images
-                  );
-            navigation.navigate("ScreenThree", {id} );
-        }}>
-            <Text>Done</Text>
-        </Pressable> */}
         </View>
     </View>
   )
