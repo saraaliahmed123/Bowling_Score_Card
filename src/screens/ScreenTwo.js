@@ -26,7 +26,8 @@ const ScreenTwo = ({navigation, route}) => {
       id: i
     }
   }));
-  // console.log(currentItem.competition);
+  console.log(currentItem.competition);
+  //<Text style={styles.newGame}>{currentItem.competition ? currentItem.competition : "New Game"}</Text>
 
   //player names
   const [teamOne, setTeamOne] = useState(currentItem?.teamOne);
@@ -123,7 +124,8 @@ const ScreenTwo = ({navigation, route}) => {
   return (
     <ScrollView>
         <View>
-          <Text style={styles.newGame}>New Game</Text>
+        <Text style={styles.newGame}>{currentItem.competition ? currentItem.competition : "New Game"}</Text>
+        <Text style={styles.newGame}>Enter player names:</Text>
           <View>
 
           <View style={styles.teamNameBox} >

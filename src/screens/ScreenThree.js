@@ -277,7 +277,8 @@ const ScreenThree = ({navigation, route}) => {
   return (
     <ScrollView>
         <View style={styles.index}>
-          <Text style={styles.newGame}>New Game</Text>
+          <Text style={styles.newGame}>New Game suppppppp</Text>
+          <Text style={styles.newGame}>Enter scores:</Text>
           <Text style={styles.title}>{teamOneName == "" ? "Team 1" : teamOneName}</Text>
           <View style={styles.shotsAndTotal}>
             <Text style={styles.titlethird}>Shots:</Text>

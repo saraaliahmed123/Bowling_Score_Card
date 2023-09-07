@@ -64,6 +64,7 @@ const ScreenOne = ({navigation, route}) => {
     <ScrollView>
         <View style={styles.index}>
           <Text style={styles.newGame}>{competition ? competition : "New Game"}</Text>
+          <Text style={styles.newGame}>Enter these details:</Text>
           <View>
             <View>
             <Text style={styles.title}>Competition:</Text>
